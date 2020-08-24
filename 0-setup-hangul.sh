@@ -17,10 +17,16 @@ cd $LANG
 wget -O $LANG.lstm.training_text https://raw.githubusercontent.com/tesseract-ocr/langdata_lstm/master/$LANG/$LANG.training_text
 wget -O $LANG.training_text https://raw.githubusercontent.com/tesseract-ocr/langdata/master/$LANG/$LANG.training_text
 wget -O $LANG.punc https://raw.githubusercontent.com/tesseract-ocr/langdata/master/$LANG/$LANG.punc
-wget -O $LANG.numberhttps://raw.githubusercontent.com/tesseract-ocr/langdata/master/$LANG/$LANG.numbers
+wget -O $LANG.config https://raw.githubusercontent.com/tesseract-ocr/langdata/master/$LANG/$LANG.config
+wget -O $LANG.number https://raw.githubusercontent.com/tesseract-ocr/langdata/master/$LANG/$LANG.numbers
 
 cd ~/tess4training
-cd tesseract/tessdata/best
+
+cd tesseract/tessdata
+wget -O $LANG.traineddata https://github.com/tesseract-ocr/tessdata_best/raw/master/$LANG.traineddata
+
+mkdir -p best
+cd best
 wget -O $LANG.traineddata https://github.com/tesseract-ocr/tessdata_best/raw/master/$LANG.traineddata
 wget -O $SCRIPT.traineddata https://github.com/tesseract-ocr/tessdata_best/raw/master/script/$SCRIPT.traineddata
 

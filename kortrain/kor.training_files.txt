@@ -1,0 +1,1 @@
+/home/ubuntu/tess4training/kortrain/kor.NanumMyeongjo.exp0.lstmf
